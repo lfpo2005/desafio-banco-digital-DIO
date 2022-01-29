@@ -1,8 +1,16 @@
 public abstract class Conta implements ContaImpl {
 
-    private int agencia;
-    private int conta;
-    private double saldo;
+    private static final int AGENCIA_PADRAO = 1;
+    private static int SEQUENCIA = 1;
+
+    protected int agencia;
+    protected int conta;
+    protected double saldo = 0;
+
+    public Conta(){
+        this.agencia = AGENCIA_PADRAO;
+        this.conta = SEQUENCIA++;
+    }
 
 
     public int getAgencia() {
