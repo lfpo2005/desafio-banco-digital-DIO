@@ -1,13 +1,11 @@
+import java.util.List;
+import lombok.Data;
 
+@Data
 public class Banco {
 
     private String nome;
 
-    public String getNome() {
-        return nome;
-    }
+    private List<Conta> contas;
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-}
+   }
